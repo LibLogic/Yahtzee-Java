@@ -1,5 +1,8 @@
 package yahtzee;
 
+import java.util.List;
+import java.util.Scanner;
+
 public class Yahtzee {
 
 	public static void main(String[] args) {
@@ -8,6 +11,15 @@ public class Yahtzee {
 		
 		Die die1 = new Die();
 		
-		System.out.println(die1.rollDie());
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Please enter number of rolls ");
+		int numOfRolls = input.nextInt();
+		input.close();
+
+		List<Integer> result = die1.numberOfRolls(numOfRolls);
+		
+		System.out.println(result);
+		
 	}
 }
