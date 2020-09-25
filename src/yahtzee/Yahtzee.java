@@ -14,9 +14,9 @@ public class Yahtzee {
 		Scanner sc =  new Scanner(System.in);
 		while(rollCount < 3 && !hand.isYahtzee()) {
 			rollCount++;
-			System.out.print("\nPlease enter a space separated list of\nwhich die(s) you want to re-roll: ");
+			System.out.print("\nPlease enter a space separated list of\nwhich die(s) you want to re-roll, \nor enter zero if done: ");
 			String input = sc.nextLine();
-			if(!input.equals("0") && rollCount != 3) {
+			if(!input.equals("0")) {
 			System.out.println("\nRoll " + rollCount + " --->\t" + hand.update(input));
 			} else {
 				System.out.println("\nFinal Hand: " + hand);
@@ -24,7 +24,9 @@ public class Yahtzee {
 			}
 		}
 		if(hand.isYahtzee()) {
-			System.out.println("YAHTZEE!");
+			System.out.println("\n\nYAHTZEE!");
+		} else {
+			System.out.println("\n\nFinal Hand:\t" + hand);
 		}
 		sc.close();
 	}
