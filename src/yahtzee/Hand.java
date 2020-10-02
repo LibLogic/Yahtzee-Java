@@ -15,21 +15,13 @@ public class Hand {
 		}
 	}
 	
-//	public List<Die> generateHand() {
-//		for (int i = 0; i < 5; i++) {
-////			hand.add(die.roll());
-//			hand.add(new Die());
-//		}
-//		return hand;
-//	}
-	
 	public List<Die> update (String selectedForRoll) {
 		String[] arr = selectedForRoll.split(" ");	
 		for(String dieIndex : arr) {
 			int dieToRoll = Integer.parseInt(dieIndex) - 1;
-//			hand.set(dieToRoll, die.roll());
-			hand.remove(dieToRoll);
-			hand.add(dieToRoll, new Die());
+			Die selectedDie = hand.get(dieToRoll);
+			selectedDie.roll();
+			hand.set(dieToRoll, selectedDie);
 		}
 		return hand;
 	}

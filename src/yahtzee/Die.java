@@ -8,10 +8,9 @@ public class Die {
 		value = (int)Math.floor(Math.random() * 6) + 1;
 	}
 	
-//	public Die roll() {
-//		value = (int)Math.floor(Math.random() * 6) + 1;
-//		return new Die();
-//	}
+	public void roll() {
+		value = (int)Math.floor(Math.random() * 6) + 1;
+	}
 	
 	public int getValue() {
 		return value;
