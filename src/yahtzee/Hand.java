@@ -28,6 +28,7 @@ public class Hand {
 		for(String dieIndex : arr) {
 			int dieToRoll = Integer.parseInt(dieIndex) - 1;
 //			hand.set(dieToRoll, die.roll());
+			hand.remove(dieToRoll);
 			hand.add(dieToRoll, new Die());
 		}
 		return hand;
