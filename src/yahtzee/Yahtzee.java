@@ -7,9 +7,12 @@ public class Yahtzee {
 	
 	public static void runRound() {
 		Hand hand = new Hand();
-		List<Die> initialHand = hand.generateHand();
-		int rollCount = 1;	
-		printHand("Roll " + rollCount + " --->\t", initialHand);
+//		List<Die> initialHand = hand.generateHand();
+		int rollCount = 1;
+		
+//		printHand("Roll " + rollCount + " --->\t", initialHand);
+		printHand("Roll " + rollCount + " --->\t", hand);
+		
 
 		Scanner sc =  new Scanner(System.in);
 		while(rollCount < 3 && !hand.isYahtzee()) {

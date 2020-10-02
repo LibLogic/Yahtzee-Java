@@ -9,18 +9,26 @@ public class Hand {
 	Die die = new Die();
 	private List<Die> hand = new ArrayList<>();
 	
-	public List<Die> generateHand() {
+	public Hand() {
 		for (int i = 0; i < 5; i++) {
-			hand.add(die.roll());
+			hand.add(new Die());
 		}
-		return hand;
 	}
+	
+//	public List<Die> generateHand() {
+//		for (int i = 0; i < 5; i++) {
+////			hand.add(die.roll());
+//			hand.add(new Die());
+//		}
+//		return hand;
+//	}
 	
 	public List<Die> update (String selectedForRoll) {
 		String[] arr = selectedForRoll.split(" ");	
 		for(String dieIndex : arr) {
 			int dieToRoll = Integer.parseInt(dieIndex) - 1;
-			hand.set(dieToRoll, die.roll());
+//			hand.set(dieToRoll, die.roll());
+			hand.add(dieToRoll, new Die());
 		}
 		return hand;
 	}
