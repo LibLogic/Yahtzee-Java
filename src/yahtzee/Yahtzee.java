@@ -28,8 +28,10 @@ public class Yahtzee {
 			printHand("\n\nFinal Hand:\t",  hand);
 			System.out.print("\nPlay another round? ");
 			String input = sc.nextLine();
-			if(input.equals("Y")) {
-				System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+			if(input.equals("Y")) {	
+				System.out.println("\n\n\n\n---------------------");
+				System.out.println("----- NEW GAME ------");
+				System.out.println("---------------------\n\n");
 				Yahtzee.runRound();
 			} else {
 				System.out.println("\nGAME OVER!");
